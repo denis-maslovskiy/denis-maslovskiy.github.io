@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.css' rel='stylesheet' />
+</head>
+<body>
+ 
+    <div class="wrapper">
+
+        <header>
+
+            <div class="interface-option-buttons">
+                <button id="refresh-bg" class="interface-option-buttons__visualization"><img src="./assets/pic/refresh.png" alt="refresh"></button>
+        
+                <form name="language-change" id="language-change">
+                    <select name="language" id="language" onchange="languageChange()" class="interface-option-buttons__visualization">
+                    <option value="en" >En</option>
+                    <option value="ru">Ru</option>
+                    <option value="bel">Bel</option>
+                    </select>
+                </form>
+        
+                <div class="interface-option-buttons__temperature-buttons">
+                    <button class="interface-option-buttons__visualization temperature-buttons temperature-buttons__f "><img src="./assets/pic/fahrenheit.png" alt="fahrenheit"></button>
+                    <button class="interface-option-buttons__visualization temperature-buttons temperature-buttons__c"><img src="./assets/pic/celsius.png" alt="celsius"></button>
+                </div>
+            </div>
+    
+            <div class="input-and-search">
+                <input type="search" placeholder="Search city" class="input-and-search__input">
+                <button class="input-and-search__search-btn">Search</button>
+            </div>
+    
+        </header>
+
+        <main>
+
+            <div id="weather">
+                <div class="city">
+                    <h1 class="city__current"></h1> <br> <h2 class="city__date"></h2>
+                </div>
+    
+                <div class="current-temp">
+                    <h1 class="current-temp__value">10</h1>
+                    <h2 class="current-temp__detailed-weather"> 
+                        <span class="weather">Overcast</span> <br> 
+                        Wind: <span class="wind">2</span> m/s <br>
+                        Humidity: <span class="humidity"> 83</span>%
+                    </h2>
+                </div>
+    
+                <div class="next-three-days-weather">
+                    <div class="next-three-days-weather__next"><h3 class="next-three-days-weather__next_one">7</h3></div>
+                    <div class="next-three-days-weather__next"><h3 class="next-three-days-weather__next_two">6</h3></div>
+                    <div class="next-three-days-weather__next"><h3 class="next-three-days-weather__next_three">3</h3></div>
+                </div>
+            </div>
+
+            <div id="map"></div>
+            <div id="coordination">
+                <h3> Latitude: <span class="latitude"></span> </h3> <br>
+                <h3> Longitude: <span class="longitude"></span></h3>
+            </div>        
+
+            <!-- <img src="./assets/pic/rain.png" alt="" style="position: absolute;"> -->
+
+        </main>
+
+        
+
+    </div>
+
+
+
+<script src="./js/main.js" type="module"></script>
+<script src="./js/weather.js" type="module"></script>
+<script src="./js/input.js" type="module"></script>
+<script src="./js/timeZone.js" type="module"></script>
+<script src="./js/location.js" type="module"></script>
+<script src="./js/date.js"></script>
+<script src="./js/backgroundByWeather.js" type="module"></script>
+<script src="./js/map.js" type="module"></script>
+<script src="./js/onload.js" type="module"></script>
+<script src="./js/mouseEvent.js" type="module"></script>
+<script src='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.js'></script>
+</body>
+</html>

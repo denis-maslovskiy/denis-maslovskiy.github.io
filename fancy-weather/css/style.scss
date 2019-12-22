@@ -1,0 +1,182 @@
+body{
+    background: grey;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+}
+
+// HEADER
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3%;
+}
+
+.input-and-search{
+
+    &__input{
+        width: 274px;
+        height: 40px;
+        background: rgba(76, 82, 85, 0.4);
+        border: 1px solid rgba(228, 227, 227, 0.2);
+        box-sizing: border-box;
+        color: white;
+        border-radius: 5px 0 0 5px;
+    }
+
+    &__search-btn{
+        width: 101px;
+        height: 44px;
+        background: rgba(174, 181, 185, 0.5);
+        border-radius: 5px;
+        border: 0;
+    }
+}
+
+.interface-option-buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 17%;
+
+    &__visualization{
+        height: 44px;
+        width: 44px;;
+        background-color: rgba(174, 181, 185, 0.5);
+        border: 0;
+    }
+}
+
+#refresh-bg, #language{
+    border-radius: 5px;
+
+    &:hover{
+        background: rgb(39, 39, 39);
+    }
+}
+
+.temperature-buttons{
+    float: left;
+
+    &__f{
+        border-radius: 5px 0 0 5px;
+        &:hover{
+            background: rgb(39, 39, 39);
+        }
+    }
+
+    &__c{
+        border-radius: 0 5px 5px 0;
+        &:hover{
+            background: rgb(39, 39, 39);
+        }
+    }
+
+    &__disable{
+        background: rgba(76, 82, 85, 0.4);
+    }
+}
+
+// MAIN
+main{
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#weather{
+    // display: inline-block;
+}
+
+#map{
+    width: 40%;
+    height: 50vh;
+    border-radius: 20px;
+    border: 2px solid grey
+}
+
+.city{
+    &__current{
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 44px;
+        line-height: 54px;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    &__date, &__time{
+        display: inline-block;
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        color: white;
+    }
+}
+
+.current-temp{
+    width: 130%;
+
+    &__value{
+        display: inline-block;
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40vh;
+        line-height: 40vh;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    &__detailed-weather{
+        display: inline-block;
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 30px;
+        color: white;
+        margin-left: 3%;
+        // margin-top: 3%;
+    }
+}
+
+.next-three-days-weather{
+    display: flex;
+    justify-content: space-between;
+
+    &__next{
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 80px;
+        line-height: 98px;
+        text-transform: uppercase;
+        color: white;
+    }
+}
+
+#coordination{
+    position: absolute;
+    margin-left: 78vw;
+    margin-top: 53vh;
+
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 15px;
+    text-align: right;
+    text-transform: capitalize;
+    color: white;
+}
+
+.active{
+    background: rgb(39, 39, 39);
+}
