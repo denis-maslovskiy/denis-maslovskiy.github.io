@@ -1,7 +1,7 @@
 import getValueFromInput from './input.js'
 
 export default async function getWeather(){
-    console.log(getValueFromInput(), :'From input');
+    console.log(getValueFromInput(), ': From input');
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${getValueFromInput()}&lang=ua&units=metric&APPID=613274154e290eb90c1b64a632f4a789`;
     const response = await fetch(url);
     const data = await response.json();
