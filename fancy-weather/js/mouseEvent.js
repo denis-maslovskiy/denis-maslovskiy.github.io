@@ -1,4 +1,5 @@
-import changeBackgroundByWeather from './backgroundByWeather.js'
+import changeBackgroundByWeather from './backgroundByWeather.js';
+import onload from './onload.js';
 
 document.querySelector('.input-and-search__search-btn').onclick = () => {
     onload();
