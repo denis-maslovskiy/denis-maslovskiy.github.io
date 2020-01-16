@@ -1,0 +1,547 @@
+@import '_variables';
+
+@mixin media-block-moving($height: 0, $width: 0, $marginTop: 0, $marginLeft: 0){
+    height: $height;
+    width: $width;
+    margin-top: $marginTop;
+    margin-left: $marginLeft;  
+}
+
+@media screen and (max-width: 800px){
+    .header {
+        background-color: yellow;
+    }
+    .instagram {
+        background-color: orange;
+    }
+    .first-section__main {
+        background-color: purple;
+    }
+}
+
+@media screen and (max-width: 375px){
+
+    .wrapper{
+       max-width: 375px;
+    }
+    
+   .first-section{
+       height: 533px;
+
+       &__header{
+        height: 57px;
+        width: 100%;
+
+        &_content{
+            justify-content: space-between;
+
+            &_nav, &_btn{
+                display: none;
+            }
+
+            &_ic{
+                @include media-block-moving(10px, 200px, 23px, 4.8%);
+                font-size: 13px;
+            }
+
+            &_phone{
+                margin-right: 4.8%;
+                @include media-block-moving(12px, 121px, 23px, );
+                
+                a{
+                    color: white;
+                }
+            }
+           }
+        }
+
+        &__sidebar, &__scroll-down{
+            display: none;
+        }
+
+        &__main{
+            @include media-block-moving(476px, 375px, 0, 0);
+            width: 100%;
+
+            &_content{
+                margin: 0 auto;
+                width: 339px;
+                margin-left: 4.8%;
+                margin-top: 85px;
+
+                &_caption{
+                    @include media-block-moving(60px, 339px, 0, 0);
+                    margin-bottom: 15px;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 23px;
+                    line-height: 31px;
+                    text-transform: uppercase;
+                }
+                &_sign{
+                    @include media-block-moving(94px, 339px, 0, 0);
+                    margin-bottom: 0;
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+
+                &_btn-calc-the-cost, &_btn-sub-ur-app{
+                    @include media-block-moving(51px, 339px, 0, 0);
+                    border: 1px solid #FFFFFF;
+                    border-radius: 2px;
+                    font-size: 13px;
+                    line-height: 15px;
+                    text-align: center;
+                    color: white;
+                    text-transform: uppercase;
+                }
+                &_btn-calc-the-cost{
+                    margin-top: 32px;
+                    margin-bottom: 26px; 
+                    background: $vanilla;
+                    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+                    border: none;
+                }
+            }
+        }
+   }
+
+   .second-section{
+        height: 1048px;
+
+       &__navbar, &__picture-two, &__slider{
+           display: none;
+       }
+
+       &__completed-projects, &__video, &__online-control, &__picture-two{
+           margin: 0;
+       }
+
+       &__completed-projects{
+           @include media-block-moving(66px, 253px, 36px, 15%);
+
+           font-style: normal;
+            font-weight: normal;
+            font-size: 26px;
+            line-height: 30px;
+            text-align: center;
+            letter-spacing: -0.07em;
+            text-transform: uppercase;
+
+           &_vector{
+               display: none;
+           }
+       }
+
+       &__text{
+           @include media-block-moving(86px, 311px, 124px, 8.53%);
+
+            font-size: 14px;
+            line-height: 22px;
+            text-align: center;
+
+       }
+
+       &__list{
+            @include media-block-moving(146px, 341px, 524px, 4.8%);
+        }
+
+        &__online-control{
+            @include media-block-moving(74px, 224px, 727px, 20.27%);
+        }
+
+       &__video{
+           @include media-block-moving(207px, 340px, 841px, 4.8%);
+
+           iframe{
+               height: 207px;
+               width: 340px;
+           }
+       }
+
+       &__picture-one{
+            @include media-block-moving(242px, 340px, 246px, 4.8%);
+            
+            &_media-quarry{
+                height: 242px;
+                width: 340px;
+            }
+       }
+
+       &__right-arrow{
+           display: none;
+       }
+   }
+
+   .third-section{
+
+    height: 2535px;
+    background-color: black;
+
+    &__text{
+        @include media-block-moving(129px, 340px, 51px, 4.8%);
+
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        color: white;
+    }
+
+    &__submit{
+        @include media-block-moving(311px, 340px, 219px, 4.8%);
+        flex-direction: column;
+
+        &_input-name, &_input-phone{
+            height: 45px;
+            width: 340px;
+            background: none;
+            color: white;
+            margin-top: 10px;
+
+            &::placeholder{
+                color: white;
+            }
+        }
+
+        &_name{
+            margin-left: 0;
+            margin-top: 30px;
+        }
+
+        &_phone{
+            margin-left: 0;
+            margin-top: 145px;
+        }
+
+        &_submit{
+            height: 51px;
+            width: 340px;
+
+        }
+    }
+
+    &__agreement{
+        margin-top: 120%;
+        margin-left: 5%;
+        p{
+            color: white;
+            
+        }
+    }
+
+    &__type-of-repair{
+        @include media-block-moving(71px, 257px, 588px, 15.2%);
+        color: white;
+    }
+
+    &__prices{
+        @include media-block-moving(1570px, 340px, 699px, 0);
+        flex-direction: column;
+
+        &_900, &_1800, &_4000{
+            @include media-block-moving(484px, 340px, 0, 4.8%);
+            margin-bottom: -70px;
+        }
+
+        &_pic{
+            width: 100%;
+        }
+
+        &_info-900, &_info-1800, &_info-4000{
+            width: 270px;
+            margin-left: 0;
+        }
+
+        &_info-900{
+            margin-top: -21%;
+        }
+
+        &_info-1800{
+            margin-top: 139%;
+        }
+
+        &_info-4000{
+            margin-top: 298%;
+        }
+
+        &_price-900, &_price-1800, &_price-4000{
+            height: 40px;
+            width: 190px;
+            margin-left: 0;
+            
+            p{
+                padding-top: 9px;
+            }
+        }
+
+        &_price-900{
+            margin-top: -19%;
+        }
+
+        &_price-1800{
+            margin-top: 140%;
+        }
+
+        &_price-4000{
+            margin-top: 299%;
+        }   
+    }
+
+    &__advantages-request{
+        display: none;
+    }
+   }
+
+   .fourth-section{
+
+    height: 121px;
+    background: black;
+
+    &__wildest-fantastic{
+        @include media-block-moving(66px, 340px, -211px, 4.8%);
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 30px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__pic-2, &__pic-3, &__pic-4, &__list{
+        display: none;
+    }
+
+    &__pic-1{
+        @include media-block-moving(242px, 340px, -121px, 4.8%);
+        background: url('/assets/pic/wildest-fantastic.png');
+        background-size: 100% 100%;
+    }
+   }
+
+   .fifth-section{
+
+    height: 221px;
+    background-color: black;
+
+    &__design-project{
+        @include media-block-moving(70px, 257px, 52px, 15.7%);
+
+        &_title{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+        }
+    }
+
+    &__text{
+        @include media-block-moving(76px, 334px, 145px, 4.8%);
+        font-size: 15px;
+        line-height: 20px;
+        text-align: center;
+        color: white;
+    }
+
+   }
+
+   .sixth-section{
+
+        height: 3251px;
+
+        &__prices{
+            @include media-block-moving(1507px, 339px, 39px, 4.8%);
+            flex-direction: column;
+
+            &_150{
+                height: 420px;
+                width: 340px;
+                &_white-form-150{
+                    margin-left: 0;
+                    width: 270px;
+                    height: 177px;
+                }
+            }
+
+            &_400{
+                height: 484px;
+                width: 340px;
+                &_white-form-400{
+                    margin-left: 0;
+                    width: 270px;
+                    height: 241px;
+                }
+            }
+
+            &_900{
+                height: 484px;
+                width: 340px;
+                &_white-form-900{
+                    margin-left: 0;
+                    width: 270px;
+                    height: 241px;
+                }
+
+                .list-900-hidden{
+                    display: none;
+                }
+            }
+
+            &_list-150, &_list-400, &_list-900{
+                height: 420px;
+                width: 340px;
+                li{
+                    font-size: 13px;
+                    line-height: 22px;
+                }
+            }
+
+            &_h2{
+                margin-top: 18px;
+            }
+
+            &_pic{
+                width: 100%;
+            }
+
+            &_price-150, &_price-400, &_price-900{
+                height: 40px;
+                width: 190px;
+                margin-left: 0;
+                p{
+                    margin-top: 8px;
+                }
+            }
+
+            &_price-150{
+                margin-top: -117%;
+            
+            }
+            &_price-400{
+                margin-top: -93%;
+            }
+            &_price-900{
+                margin-top: -94%;
+            }
+        }
+
+        &__content{
+            display: none;
+        }
+
+        &__our-team{
+            @include media-block-moving(133px, 339px, 1622px, 4.8%);
+            font-size: 22px;
+            line-height: 30px;
+
+            &_pic{
+                margin-left: 33%;
+            }
+
+            &_text{
+                font-size: 15px;
+                line-height: 20px;
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+
+        &__teammates{
+            @include media-block-moving(1455px, 339px, 1796px, 4.8%);
+            flex-direction: column;
+            &_left, &_mid, &_right{
+                height: 449px;
+                width: 339px;
+            }
+            &_orng-pic{
+                margin-left: -96.2%;
+            }
+        }
+   }
+
+   .seventh-section{
+       display: none;
+   }
+
+   .eighth-section{
+
+        height: 1087px;
+        background-color: black;
+
+        &__have-a-question{
+            @include media-block-moving(497px, 340px, 76px, 4.8%);
+            font-size: 20px;
+            line-height: 28px;
+
+            &_block{
+                &_question{
+                    margin-left: 8%;
+
+                    &_input{
+
+                        &_name, &_phone, &_question{
+                            height: 45px;
+                            width: 340px;
+                            margin-bottom: 50px;
+                            // margin-top: 0;
+                        }
+                        &_question{
+                            margin-top: 0;
+                        }
+                    }
+
+                    &_label-name{
+                        margin-top: 11%;
+                    }
+                    &_label-phone{
+                        margin-top: -2%;
+                    }
+                    &_label-question{
+                        margin-top: -2%;
+                    }
+                }
+
+                &_agreement{
+                    height: 18px;
+                    width: 286px;
+                    margin-left: 0;
+                    margin-top: -7%;
+                    &_p{
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
+                }
+
+                &_submit{
+                    height: 51px;
+                    width: 339px;
+                    margin-left: 32.8%;
+                }
+            }
+        }
+
+        &__map{
+            @include media-block-moving(255px, 339px, 619px, 4.8%);
+            
+            &_Google-Map{
+                margin: 0;
+                margin-left: -2.5%;
+                height: 255px;
+                width: 106%;
+            }
+        }
+
+        &__address-and-phone{
+            @include media-block-moving(133px, 339px, 916px, 4.8%);
+            font-size: 18px;
+            line-height: 25px;
+        }
+   }
+
+   footer{
+        display: none;
+   }
+   
+}
