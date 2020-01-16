@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Canvas</title>
+</head>
+<body>
+    <header>
+        <div class="nav-icon">
+            <img src="assets/three-lines.svg" alt="three-lines">
+        </div>
+        <div class="bar-title">
+            <div class="bar-title__h1"><h1>CodeJam - Pallet</h1></div>
+        </div>
+        <div class="menu">
+            <img src="assets/three-points.svg" alt="menu">
+        </div>
+    </header>
+
+    <main>
+        <div class="tools">
+            <div class="wrapper">
+                <ul>
+                    <li id="bucket">
+                        <p class="bucket"><img src="assets/paint-bucket.svg" alt="paint-bucket"> <span>Paint bucket</span></p>
+                    </li>
+                    <li id="pipette">
+                        <p class="pipette"><img src="assets/pipette.svg" alt="pipette"> <span>Choose color</span></p>
+                    </li>
+                    <li id="pencil">
+                        <p class="pencil"><img src="assets/pencil.svg" alt="pencil" class="pencil"> <span>Pencil</span></p>
+                    </li>
+                    <li class="transform" id="transform">  
+                        <p class="transform_p"><img src="assets/transform.svg" alt="transform"> <span>Transform</span></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="color">
+            <div class="colors-panel">
+                <ul>
+                    <li class="color__li">
+                        <p>
+                            <input type="color" id="current-color" name="head" value="#00ff00">
+                            <label for="head"><span>Current color</span></label>
+                        </p>
+                    </li>
+                    <li class="color__li">
+                        <p>
+                             <div class="square prev-color"></div> <span>Prev color</span> 
+                        </p>
+                    </li>
+                    <li class="color__li">
+                        <p>
+                            <div class="square red-color"></div> <span>Red</span> 
+                        </p>
+                    </li>
+                    <li class="color__li">
+                        <p>
+                            <div class="square blue-color"></div> <span>Blue</span> 
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <canvas id="canvas" class="canvas"></canvas>
+
+        <input class="town-search-input" type="text">
+        <button class="btn-load">Load</button>
+    </main>
+    
+    <div class="image-block">
+        <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg"
+       width="300" height="227">
+    </div>
+
+    <div class="resolution-change">
+        <button class="resolution-change-btn btn-32x32">32x32</button>
+        <button class="resolution-change-btn btn-128x128">128x128</button>
+        <button class="resolution-change-btn btn-256x256">256x258</button>
+        <button class="resolution-change-btn btn-512x512">512x512</button>
+    </div>
+
+    <div class="grayscale">
+        <button class="grayscale-btn">Grayscale</button>
+    </div>
+
+<script src="palette.js"></script>
+</body>
+</html>
