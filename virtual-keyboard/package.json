@@ -1,0 +1,23 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "RSSchool / 2nd stage / codejam",
+  "main": "keyboard.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denis-maslovskiy/codejam-virtual-keyboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denis-maslovskiy/codejam-virtual-keyboard/issues"
+  },
+  "homepage": "https://github.com/denis-maslovskiy/codejam-virtual-keyboard#readme"
+}
